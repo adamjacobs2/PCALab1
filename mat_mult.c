@@ -125,6 +125,9 @@ numworkers = numtasks-1;
       }
 
       /* Receive results from worker tasks */
+      double wCalcTime;
+      double wCalcTimeMax = 0;
+      double wCalcTimeSum = 0;
       mtype = FROM_WORKER;
       for (i=1; i<=numworkers; i++)
       {
@@ -133,7 +136,11 @@ numworkers = numtasks-1;
          MPI_Recv(&rows, 1, MPI_INT, source, mtype, MPI_COMM_WORLD, &status);
          MPI_Recv(&C[offset][0], rows*NCB, MPI_INT, source, mtype, 
                   MPI_COMM_WORLD, &status);
+         MPI_Recv(&wCalcTime, 1, MPI_DOUBLE, source, mtype, MPI_COMM_WORLD, &status);
+         wCalcTimeMax = (wCalcTime > wCalcTimeMax) ? wCalcTime : wCalcTimeMax;
+         wCalcTimeSum += wCalcTime;
          printf("Received results from task %d\n",source);
+         printf("Task %d wCalcTime: %.8f \n",source, wCalcTime);
       }
 
         //end = clock();
@@ -154,6 +161,8 @@ numworkers = numtasks-1;
       printf("\n******************************************************\n");
       printf ("\n");
       printf("total time: %.8f sec\n", time_spent);
+      printf("total worker time %.8f \n", wCalcTimeSum);
+      printf("max worker time %.8f \n", wCalcTimeMax);
       printf ("\n");
    }
 
@@ -166,6 +175,8 @@ numworkers = numtasks-1;
       MPI_Recv(&rows, 1, MPI_INT, MASTER, mtype, MPI_COMM_WORLD, &status);
       MPI_Recv(&A, rows*NCA, MPI_INT, MASTER, mtype, MPI_COMM_WORLD, &status);
       MPI_Recv(&B, NRB*NCB, MPI_INT, MASTER, mtype, MPI_COMM_WORLD, &status);
+
+      begin = now();
             
       for (i=0; i<rows; i++)
          for (j=0; j<NCB; j++)
@@ -174,11 +185,15 @@ numworkers = numtasks-1;
            for (k=0; k<NCA; k++)            
               C[i][j] = C[i][j] + A[i][k] * B[k][j];
          }
-         
+      
+      end = now();
+      time_spent = tdiff(begin, end);
+
       mtype = FROM_WORKER;
       MPI_Send(&offset, 1, MPI_INT, MASTER, mtype, MPI_COMM_WORLD);
       MPI_Send(&rows, 1, MPI_INT, MASTER, mtype, MPI_COMM_WORLD);
       MPI_Send(&C, rows*NCB, MPI_INT, MASTER, mtype, MPI_COMM_WORLD);
+      MPI_Send(&time_spent, 1, MPI_DOUBLE, MASTER, mtype, MPI_COMM_WORLD);
    }
    MPI_Finalize();
 }
