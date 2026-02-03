@@ -27,33 +27,34 @@ int	numtasks,            /* number of tasks in partition */
 MPI_Status status;
 
 double function_x(double x){
-    return (double) (8.0 * sqrt(2.0 * PI) / pow(E, 2.0 * x * x ));
+    return (double) (8.0 * sqrt(2.0 * PI)) / pow(E, 4.0 * x * x);
 }
 
 
 double estimate_g_serial(double lower_bound, double upper_bound, long long int N){
-    Xi = malloc(N);
-    double estimate = 0;
-    double rectangle_width = (upper_bound - lower_bound) / N;
+    Xi = malloc(N *sizeof(double));
+    double total_sum = 0;
+    double range = upper_bound - lower_bound;
     for(int j = 0; j < N; j++){
     
-        //random int betweeen [a, b-1]
-        int randInt =  (rand() %  (int) (upper_bound - lower_bound - 1) - (int) lower_bound);
-        //random double between [0, 1]
-        double randDouble = (double) rand() / (double) RAND_MAX;
-        Xi[j] = (double) randInt + randDouble;
+        //random double between [a, b]
+        double randDouble = lower_bound + ((double)rand() / (double)RAND_MAX) * range;
+        Xi[j] = randDouble;
     }
 
     for(int j = 0; j < N; j++){
-        estimate += rectangle_width * function_x(Xi[j]);
+        total_sum += function_x(Xi[j]);
     }
 
     free(Xi);
+
+    return total_sum * range / N;
 
 }
 double estimate_g(double lower_bound, double upper_bound, long long int N){
     MPI_Comm_rank(MPI_COMM_WORLD,&taskid);
     MPI_Comm_size(MPI_COMM_WORLD,&numtasks);
+
     if (numtasks < 2 ) {
         printf("Need at least two MPI tasks. Quitting...\n");
         MPI_Abort(MPI_COMM_WORLD, 1);
