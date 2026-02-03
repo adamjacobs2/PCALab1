@@ -1,0 +1,5 @@
+Worker 2 Generating and summing 33333 random numbers
+Worker 1 Generating and summing 33334 random numbers
+Worker 3 Generating and summing 33333 random numbers
+Final Result: 17.815181
+Time spent: 0.000960

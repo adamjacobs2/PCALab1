@@ -9,7 +9,7 @@
 #define FROM_MASTER 1          /* setting a message type */
 #define FROM_WORKER 2          
 
-#define DEBUG
+//#define DEBUG
 
 # define PI		3.14159265358979323846	/* pi */
 # define E		2.7182818284590452354	/* e */
@@ -85,28 +85,22 @@ double estimate_g(double lower_bound, double upper_bound, long long int N){
 
     return 0;
 
+
     
 }
 
 void collect_results(double *result){
-        if(taskid != MASTER){
-                #ifdef DEBUG
-                    printf("Worker %d sending %4f to master\n", taskid, *result);
-                #endif
-             MPI_Send(result, 1, MPI_DOUBLE, MASTER, FROM_WORKER, MPI_COMM_WORLD);
-        }
-        else{
-            double final_result = 0;;
-            for(int source = 1; source <= numworkers; source++){
-                MPI_Recv(result, 1, MPI_DOUBLE, source, FROM_WORKER, MPI_COMM_WORLD, &status);
-                final_result += *result;
-            }
-            end = now();
-            time_spent = tdiff(begin, end);
-            printf("Final Result: %f\n", final_result);
-            printf("Time spent: %f\n", time_spent);
+    double final_result = 0;
+    MPI_Reduce(result, &final_result, 1, MPI_DOUBLE, MPI_SUM, MASTER, MPI_COMM_WORLD);
+    if(taskid == MASTER){
+        end = now();
+        time_spent = tdiff(begin, end);
+        printf("Final Result: %f\n", final_result);
+        printf("Time spent: %f\n", time_spent);
+    }
+     
+         
 
-        }
 }
 
 void init_rand_seed(){
