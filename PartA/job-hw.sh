@@ -10,6 +10,6 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1000mb
 #SBATCH -t 00:05:00
-#SBATCH -o myoutput
-#SBATCH -e myerr
+#SBATCH -o output
+
 srun --mpi=$HPC_PMIX ./mat_mult

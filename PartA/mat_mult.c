@@ -161,8 +161,8 @@ numworkers = numtasks-1;
       printf("\n******************************************************\n");
       printf ("\n");
       printf("total time: %.8f sec\n", time_spent);
-      printf("total worker time %.8f \n", wCalcTimeSum);
-      printf("max worker time %.8f \n", wCalcTimeMax);
+      printf("total worker time %.8f sec \n", wCalcTimeSum);
+      printf("max worker time %.8f sec \n", wCalcTimeMax);
       printf ("\n");
    }
 

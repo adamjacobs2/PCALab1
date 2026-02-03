@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/apps/mpi/intel/2025.1.0/openmpi/5.0.7/include",
+                "/usr/include"
+            ],
+            "compilerPath": "/apps/mpi/intel/2025.1.0/openmpi/5.0.7/bin/mpicc",
+            "defines": [],
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
