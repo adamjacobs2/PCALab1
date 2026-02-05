@@ -1,2 +1,18 @@
-Final Result: 17.834498
-Time spent: 0.000181
+Worker 0 Generating and summing 6251 random numbers
+Worker 1 Generating and summing 6250 random numbers
+Worker 2 Generating and summing 6250 random numbers
+Worker 3 Generating and summing 6250 random numbers
+Worker 4 Generating and summing 6250 random numbers
+Worker 5 Generating and summing 6250 random numbers
+Worker 6 Generating and summing 6250 random numbers
+Worker 7 Generating and summing 6250 random numbers
+Worker 8 Generating and summing 6250 random numbers
+Worker 9 Generating and summing 6250 random numbers
+Worker 10 Generating and summing 6250 random numbers
+Worker 11 Generating and summing 6250 random numbers
+Worker 12 Generating and summing 6250 random numbers
+Worker 13 Generating and summing 6250 random numbers
+Worker 14 Generating and summing 6250 random numbers
+Worker 15 Generating and summing 6250 random numbers
+Final Result: 17.566828
+Time spent: 0.349217

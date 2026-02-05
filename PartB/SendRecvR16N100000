@@ -1,2 +1,33 @@
-Final Result: 17.686558
-Time spent: 0.000104
+Worker 12 Generating and summing 6250 random numbers
+Worker 1 Generating and summing 6250 random numbers
+Worker 2 Generating and summing 6250 random numbers
+Worker 3 Generating and summing 6250 random numbers
+Worker 4 Generating and summing 6250 random numbers
+Worker 5 Generating and summing 6250 random numbers
+Worker 6 Generating and summing 6250 random numbers
+Worker 7 Generating and summing 6250 random numbers
+Worker 8 Generating and summing 6250 random numbers
+Worker 9 Generating and summing 6250 random numbers
+Worker 11 Generating and summing 6250 random numbers
+Worker 13 Generating and summing 6250 random numbers
+Worker 14 Generating and summing 6250 random numbers
+Worker 15 Generating and summing 6250 random numbers
+Worker 2 sending 1.168875 to master
+Worker 9 sending 1.133215 to master
+Worker 10 Generating and summing 6250 random numbers
+Worker 12 sending 1.142192 to master
+Worker 13 sending 1.131745 to master
+Worker 15 sending 1.143954 to master
+Worker 3 sending 1.124999 to master
+Worker 6 sending 1.106928 to master
+Worker 7 sending 1.114282 to master
+Worker 14 sending 1.086675 to master
+Worker 1 sending 1.075448 to master
+Worker 4 sending 1.126341 to master
+Worker 5 sending 1.191405 to master
+Worker 8 sending 1.036645 to master
+Worker 10 sending 1.021090 to master
+Worker 0 Generating and summing 6250 random numbers
+Worker 11 sending 1.099811 to master
+Final Result: 17.796713
+Time spent: 0.341127

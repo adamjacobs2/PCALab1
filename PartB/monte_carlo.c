@@ -42,6 +42,7 @@ int	numtasks,            /* number of tasks in partition */
     aveN,
     extra; /* used to determine rows sent to each worker */
 
+double sum;
 MPI_Status status;
 
 double function_x(double x){
@@ -53,36 +54,39 @@ double estimate_g(double lower_bound, double upper_bound, long long int N){
    
     if (numtasks < 2 ) {
         printf("Need at least two MPI tasks. Quitting...\n");
+        fflush(stdout);
         MPI_Abort(MPI_COMM_WORLD, 1);
         exit(1);
     }
     
 
     numworkers = numtasks-1;
-    aveN  = N / numworkers;
-    extra = N % numworkers;
+    aveN  = N / numtasks;
+    extra = N % numtasks;
     
     //Workers populate random data between [a, b]
     double range = upper_bound - lower_bound;
-    double sum = 0;
+    
     double randDouble; 
     int localSize; 
 
 
-    if(taskid != MASTER){
-        
-        localSize = (taskid <= extra) ? aveN+1 : aveN; 
-        #ifdef DEBUG
-        printf("Worker %d Generating and summing %d random numbers\n", taskid, localSize);
-        #endif
-        for(int i = 0; i < localSize; i++){
-            //random double between [0, 1]
-            randDouble = lower_bound + ((double)rand() / (double)RAND_MAX) * range;
-            sum += function_x(randDouble);
-        }
-        return sum * range / (double) N;
-    }
 
+        
+    localSize = (taskid < extra) ? aveN+1 : aveN; 
+    #ifdef DEBUG
+    printf("Worker %d Generating and summing %d random numbers\n", taskid, localSize);
+    fflush(stdout);
+    #endif
+
+    for(int i = 0; i < localSize; i++){
+        //random double between [0, 1]
+        randDouble = lower_bound + ((double)rand() / (double)RAND_MAX) * range;
+        sum += function_x(randDouble);
+    }
+    sum = sum * range / (double) N;
+    return sum;
+    
     return 0;
 
     
@@ -92,11 +96,12 @@ void collect_results(double *result){
         if(taskid != MASTER){
                 #ifdef DEBUG
                     printf("Worker %d sending %4f to master\n", taskid, *result);
+                    fflush(stdout);
                 #endif
              MPI_Send(result, 1, MPI_DOUBLE, MASTER, FROM_WORKER, MPI_COMM_WORLD);
         }
         else{
-            double final_result = 0;;
+            double final_result = sum;
             for(int source = 1; source <= numworkers; source++){
                 MPI_Recv(result, 1, MPI_DOUBLE, source, FROM_WORKER, MPI_COMM_WORLD, &status);
                 final_result += *result;
@@ -105,6 +110,7 @@ void collect_results(double *result){
             time_spent = tdiff(begin, end);
             printf("Final Result: %f\n", final_result);
             printf("Time spent: %f\n", time_spent);
+            fflush(stdout);
 
         }
 }
@@ -120,6 +126,7 @@ void init_rand_seed(){
 
 int main(int argc, char **argv)
 {
+    begin = now();
     double result = 0.0;
     MPI_Init(&argc, &argv);
     float lower_bound = atof(argv[1]);
@@ -127,7 +134,6 @@ int main(int argc, char **argv)
     long long int N = atof(argv[3]);
 
     init_rand_seed(); // using srand()
-    begin = now();
     result = estimate_g(lower_bound, upper_bound, N);
     collect_results(&result);
     MPI_Finalize();

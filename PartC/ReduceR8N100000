@@ -1,2 +1,10 @@
-Final Result: 17.768826
-Time spent: 0.000896
+Worker 0 Generating and summing 12501 random numbers
+Worker 2 Generating and summing 12500 random numbers
+Worker 3 Generating and summing 12500 random numbers
+Worker 4 Generating and summing 12500 random numbers
+Worker 5 Generating and summing 12500 random numbers
+Worker 6 Generating and summing 12500 random numbers
+Worker 7 Generating and summing 12500 random numbers
+Worker 1 Generating and summing 12500 random numbers
+Final Result: 17.433916
+Time spent: 0.251618
