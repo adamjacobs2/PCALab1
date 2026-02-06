@@ -1,2 +1,65 @@
-Final Result: 18.247826
-Time spent: 0.000139
+Worker 26 Generating and summing 3125 random numbers
+Worker 0 Generating and summing 3125 random numbers
+Worker 1 Generating and summing 3125 random numbers
+Worker 2 Generating and summing 3125 random numbers
+Worker 4 Generating and summing 3125 random numbers
+Worker 5 Generating and summing 3125 random numbers
+Worker 6 Generating and summing 3125 random numbers
+Worker 7 Generating and summing 3125 random numbers
+Worker 11 Generating and summing 3125 random numbers
+Worker 12 Generating and summing 3125 random numbers
+Worker 13 Generating and summing 3125 random numbers
+Worker 14 Generating and summing 3125 random numbers
+Worker 15 Generating and summing 3125 random numbers
+Worker 16 Generating and summing 3125 random numbers
+Worker 17 Generating and summing 3125 random numbers
+Worker 20 Generating and summing 3125 random numbers
+Worker 22 Generating and summing 3125 random numbers
+Worker 25 Generating and summing 3125 random numbers
+Worker 28 Generating and summing 3125 random numbers
+Worker 28 sending 0.541640 to master
+Worker 29 Generating and summing 3125 random numbers
+Worker 1 sending 0.505730 to master
+Worker 2 sending 0.517891 to master
+Worker 3 Generating and summing 3125 random numbers
+Worker 4 sending 0.561691 to master
+Worker 5 sending 0.567203 to master
+Worker 7 sending 0.527001 to master
+Worker 8 Generating and summing 3125 random numbers
+Worker 9 Generating and summing 3125 random numbers
+Worker 10 Generating and summing 3125 random numbers
+Worker 16 sending 0.558088 to master
+Worker 18 Generating and summing 3125 random numbers
+Worker 19 Generating and summing 3125 random numbers
+Worker 21 Generating and summing 3125 random numbers
+Worker 22 sending 0.562880 to master
+Worker 23 Generating and summing 3125 random numbers
+Worker 24 Generating and summing 3125 random numbers
+Worker 26 sending 0.580952 to master
+Worker 27 Generating and summing 3125 random numbers
+Worker 31 Generating and summing 3125 random numbers
+Worker 3 sending 0.527476 to master
+Worker 6 sending 0.484978 to master
+Worker 8 sending 0.540005 to master
+Worker 10 sending 0.571313 to master
+Worker 11 sending 0.561026 to master
+Worker 12 sending 0.545547 to master
+Worker 13 sending 0.615011 to master
+Worker 14 sending 0.613807 to master
+Worker 15 sending 0.509883 to master
+Worker 17 sending 0.601539 to master
+Worker 18 sending 0.555606 to master
+Worker 20 sending 0.601587 to master
+Worker 24 sending 0.489134 to master
+Worker 25 sending 0.519492 to master
+Worker 27 sending 0.573148 to master
+Worker 29 sending 0.518573 to master
+Worker 31 sending 0.554317 to master
+Worker 9 sending 0.569000 to master
+Worker 19 sending 0.588950 to master
+Worker 21 sending 0.613675 to master
+Worker 23 sending 0.582254 to master
+Worker 30 Generating and summing 3125 random numbers
+Worker 30 sending 0.517475 to master
+Final Result: 17.683473
+Time spent: 1.023742

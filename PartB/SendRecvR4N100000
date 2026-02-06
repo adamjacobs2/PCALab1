@@ -1,9 +1,9 @@
-Worker 1 Generating and summing 25000 random numbers
 Worker 2 Generating and summing 25000 random numbers
-Worker 0 Generating and summing 25000 random numbers
 Worker 3 Generating and summing 25000 random numbers
-Worker 3 sending 4.312819 to master
-Worker 1 sending 4.515952 to master
-Worker 2 sending 4.293641 to master
-Final Result: 17.496007
-Time spent: 0.227075
+Worker 0 Generating and summing 25000 random numbers
+Worker 1 Generating and summing 25000 random numbers
+Worker 3 sending 4.490095 to master
+Worker 2 sending 4.274172 to master
+Worker 1 sending 4.516200 to master
+Final Result: 17.611520
+Time spent: 0.285708

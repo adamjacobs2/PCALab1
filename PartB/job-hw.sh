@@ -5,11 +5,11 @@
 #SBATCH --account=eel6763
 #SBATCH --qos=eel6763
 #SBATCH --nodes=1
-#SBATCH --ntasks=32
-#SBATCH --ntasks-per-node=32
+#SBATCH --ntasks=16
+#SBATCH --ntasks-per-node=16
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1000mb
 #SBATCH -t 00:05:00
-#SBATCH -o SendRecvR32N100000
+#SBATCH -o SendRecvR16N100000
 
 srun --mpi=$HPC_PMIX ./monte_carlo -10 10 100000

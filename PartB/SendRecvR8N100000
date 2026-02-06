@@ -1,17 +1,17 @@
-Worker 3 Generating and summing 12500 random numbers
-Worker 4 Generating and summing 12500 random numbers
-Worker 6 Generating and summing 12500 random numbers
-Worker 0 Generating and summing 12500 random numbers
-Worker 5 Generating and summing 12500 random numbers
-Worker 7 Generating and summing 12500 random numbers
-Worker 1 Generating and summing 12500 random numbers
 Worker 2 Generating and summing 12500 random numbers
-Worker 3 sending 2.158774 to master
-Worker 4 sending 2.187240 to master
-Worker 5 sending 2.137343 to master
-Worker 7 sending 2.159958 to master
-Worker 1 sending 2.324654 to master
-Worker 2 sending 2.291552 to master
-Worker 6 sending 2.111170 to master
-Final Result: 17.555971
-Time spent: 0.232833
+Worker 3 Generating and summing 12500 random numbers
+Worker 0 Generating and summing 12500 random numbers
+Worker 1 Generating and summing 12500 random numbers
+Worker 6 Generating and summing 12500 random numbers
+Worker 4 Generating and summing 12500 random numbers
+Worker 7 Generating and summing 12500 random numbers
+Worker 5 Generating and summing 12500 random numbers
+Worker 2 sending 2.207437 to master
+Worker 3 sending 2.383007 to master
+Worker 1 sending 2.108284 to master
+Worker 4 sending 2.222754 to master
+Worker 7 sending 2.203908 to master
+Worker 5 sending 2.167382 to master
+Worker 6 sending 2.195909 to master
+Final Result: 17.593595
+Time spent: 0.269979

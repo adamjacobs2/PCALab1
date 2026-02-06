@@ -1,2 +1,65 @@
-Final Result: 17.361527
-Time spent: 0.000173
+Worker 8 Generating and summing 313 random numbers
+Worker 8 sending 0.465533 to master
+Worker 19 Generating and summing 312 random numbers
+Worker 19 sending 0.573794 to master
+Worker 21 Generating and summing 312 random numbers
+Worker 21 sending 0.730553 to master
+Worker 22 Generating and summing 312 random numbers
+Worker 22 sending 0.906389 to master
+Worker 5 Generating and summing 313 random numbers
+Worker 5 sending 0.615708 to master
+Worker 10 Generating and summing 313 random numbers
+Worker 10 sending 0.567399 to master
+Worker 27 Generating and summing 312 random numbers
+Worker 27 sending 0.706265 to master
+Worker 31 Generating and summing 312 random numbers
+Worker 31 sending 0.592949 to master
+Worker 1 Generating and summing 313 random numbers
+Worker 1 sending 0.572129 to master
+Worker 2 Generating and summing 313 random numbers
+Worker 4 Generating and summing 313 random numbers
+Worker 4 sending 0.614272 to master
+Worker 6 Generating and summing 313 random numbers
+Worker 6 sending 0.566953 to master
+Worker 9 Generating and summing 313 random numbers
+Worker 9 sending 0.609319 to master
+Worker 13 Generating and summing 313 random numbers
+Worker 13 sending 0.540212 to master
+Worker 15 Generating and summing 313 random numbers
+Worker 15 sending 0.581907 to master
+Worker 17 Generating and summing 312 random numbers
+Worker 17 sending 0.706189 to master
+Worker 20 Generating and summing 312 random numbers
+Worker 20 sending 0.790454 to master
+Worker 23 Generating and summing 312 random numbers
+Worker 23 sending 0.426326 to master
+Worker 24 Generating and summing 312 random numbers
+Worker 24 sending 0.539796 to master
+Worker 26 Generating and summing 312 random numbers
+Worker 26 sending 0.539397 to master
+Worker 28 Generating and summing 312 random numbers
+Worker 28 sending 0.461105 to master
+Worker 29 Generating and summing 312 random numbers
+Worker 29 sending 0.422933 to master
+Worker 30 Generating and summing 312 random numbers
+Worker 30 sending 0.888362 to master
+Worker 2 sending 0.595322 to master
+Worker 3 Generating and summing 313 random numbers
+Worker 3 sending 0.525077 to master
+Worker 7 Generating and summing 313 random numbers
+Worker 7 sending 0.343147 to master
+Worker 11 Generating and summing 313 random numbers
+Worker 11 sending 0.453741 to master
+Worker 12 Generating and summing 313 random numbers
+Worker 12 sending 0.526765 to master
+Worker 14 Generating and summing 313 random numbers
+Worker 14 sending 0.751172 to master
+Worker 16 Generating and summing 312 random numbers
+Worker 16 sending 0.636599 to master
+Worker 25 Generating and summing 312 random numbers
+Worker 25 sending 0.516790 to master
+Worker 0 Generating and summing 313 random numbers
+Worker 18 Generating and summing 312 random numbers
+Worker 18 sending 0.576221 to master
+Final Result: 18.815336
+Time spent: 0.678375

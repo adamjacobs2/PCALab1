@@ -1,2 +1,65 @@
-Final Result: 19.549612
-Time spent: 0.000054
+Worker 0 Generating and summing 32 random numbers
+Worker 2 Generating and summing 32 random numbers
+Worker 2 sending 0.313822 to master
+Worker 5 Generating and summing 32 random numbers
+Worker 5 sending 0.049149 to master
+Worker 6 Generating and summing 32 random numbers
+Worker 6 sending 1.205334 to master
+Worker 9 Generating and summing 31 random numbers
+Worker 9 sending 0.361458 to master
+Worker 10 Generating and summing 31 random numbers
+Worker 10 sending 1.107931 to master
+Worker 11 Generating and summing 31 random numbers
+Worker 11 sending 0.313961 to master
+Worker 12 Generating and summing 31 random numbers
+Worker 12 sending 0.415981 to master
+Worker 13 Generating and summing 31 random numbers
+Worker 13 sending 1.128168 to master
+Worker 14 Generating and summing 31 random numbers
+Worker 14 sending 0.631679 to master
+Worker 19 Generating and summing 31 random numbers
+Worker 19 sending 0.716023 to master
+Worker 24 Generating and summing 31 random numbers
+Worker 24 sending 0.604001 to master
+Worker 25 Generating and summing 31 random numbers
+Worker 25 sending 0.579082 to master
+Worker 26 Generating and summing 31 random numbers
+Worker 26 sending 0.683533 to master
+Worker 28 Generating and summing 31 random numbers
+Worker 28 sending 0.472726 to master
+Worker 29 Generating and summing 31 random numbers
+Worker 29 sending 0.698726 to master
+Worker 3 Generating and summing 32 random numbers
+Worker 3 sending 1.017221 to master
+Worker 7 Generating and summing 32 random numbers
+Worker 7 sending 0.573522 to master
+Worker 8 Generating and summing 31 random numbers
+Worker 8 sending 0.431736 to master
+Worker 15 Generating and summing 31 random numbers
+Worker 15 sending 0.361571 to master
+Worker 16 Generating and summing 31 random numbers
+Worker 16 sending 1.034961 to master
+Worker 17 Generating and summing 31 random numbers
+Worker 17 sending 0.240696 to master
+Worker 18 Generating and summing 31 random numbers
+Worker 18 sending 1.096787 to master
+Worker 20 Generating and summing 31 random numbers
+Worker 20 sending 0.922189 to master
+Worker 21 Generating and summing 31 random numbers
+Worker 21 sending 0.383658 to master
+Worker 27 Generating and summing 31 random numbers
+Worker 27 sending 0.319647 to master
+Worker 30 Generating and summing 31 random numbers
+Worker 30 sending 0.718196 to master
+Worker 31 Generating and summing 31 random numbers
+Worker 31 sending 0.944775 to master
+Worker 1 Generating and summing 32 random numbers
+Worker 1 sending 0.569424 to master
+Worker 4 Generating and summing 32 random numbers
+Worker 4 sending 0.321955 to master
+Worker 23 Generating and summing 31 random numbers
+Worker 23 sending 0.000013 to master
+Worker 22 Generating and summing 31 random numbers
+Worker 22 sending 0.314202 to master
+Final Result: 18.576210
+Time spent: 0.705602
